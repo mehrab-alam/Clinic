@@ -1,0 +1,98 @@
+.doctorContainer {
+    font-family: sans-serif;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.doctorContainer h3,
+.doctorContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+.doctorContainer>div:first-child {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.doctorContainer>div:first-child>div:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.doctorHeader {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.doctorHeader h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.doctorHeader p {
+    font-size: 1.2rem;
+    color: #a4a2a2;
+}
+
+.doctorHeader>div:last-child {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #b0acac;
+    background-color: #fafafa;
+    gap: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.docProfile {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 100px;
+}
+
+
+.docName {
+    font-size: 1.5rem;
+    padding-top: 10px;
+}
+
+.docExp {
+    padding-top: 10px;
+    font-size: 1.5rem;
+    color: #b0acac;
+}
+
+.docSkills {
+    padding-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    row-gap: 10px;
+    color-scheme: 40px;
+}
+
+.docSkills a {
+
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #f4f1f1e6;
+    color: black;
+
+}
+
+.docSkills a:last-child {
+    width: 100%;
+}
