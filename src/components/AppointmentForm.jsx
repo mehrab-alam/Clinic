@@ -30,7 +30,8 @@ const AppointmentForm = () => {
         let cust = customerFiles.map(f => f.customerId).sort((b, a) => b - a).pop() + 1
         console.log(`this is ${cust}`)
         let customerId = customerFiles.length <= 0 ? 1 : cust
-
+        let newfile = customerFiles.filter(f => f.number == personalDetail.number && f.mail === personalDetail.mail)
+        newfile.map(f => customerId = f.customerId)
 
         console.log(`this is customer id ${customerId} `)
         console.log(personalDetail)

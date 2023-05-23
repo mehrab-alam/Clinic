@@ -7,11 +7,11 @@ export default function handler(req, res) {
     console.log(id)
 
     const connection = mysql.createConnection({
-        user: "root",
-        password: "Mehrab@123",
-        host: "127.0.0.1",
-        port: "3306",
-        database: "clinicdb"
+        user: process.env.DB_USER || 'root',
+        password: process.env.DB_PASSWORD || "Mehrab@123",
+        host: process.env.DB_HOST || "127.0.0.1",
+        port: process.env.DB_PORT || "3306",
+        database: process.env.DB_NAME || "clinicdb"
     });
     connection.connect((err) => {
         if (err) {
