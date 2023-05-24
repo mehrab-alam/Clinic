@@ -1,5 +1,5 @@
 import { Image, Anchor, Button } from 'antd'
-import styles from "../styles/Hearnic.module.css"
+import styles from "../styles/Hero.module.css"
 
 const Hero = () => {
     const links = ['Home', 'About Us', 'Specialists', 'Doctors', 'Contact']
