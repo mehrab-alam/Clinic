@@ -25,17 +25,7 @@ const AppointmentForm = () => {
         })
     }
 
-
     const onFinish = (personalDetail) => {
-        // let cust = customerFiles.map(f => f.customerId).sort((b, a) => b - a).pop() + 1
-        // console.log(`this is ${cust}`)
-        // let customerId = customerFiles.length <= 0 ? 1 : cust
-        // let newfile = customerFiles.filter(f => f.number == personalDetail.number && f.mail === personalDetail.mail)
-        // newfile.map(f => customerId = f.customerId)
-
-        // console.log(`this is customer id ${customerId} `)
-
-
         fetch(`/api/db`).then(res => {
             res.json().then(data => {
                 console.log(data.result[0]['COUNT(*)'])
@@ -49,7 +39,7 @@ const AppointmentForm = () => {
     }
 
     return (
-        <div className={styles.formContainer} id='form'>
+        <section className={styles.formContainer} id='form'>
             <div>
                 <Image src="./img/logo-input-rem.png" height={60} />
                 <div className={styles.formHeader}>
@@ -135,7 +125,7 @@ const AppointmentForm = () => {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 
