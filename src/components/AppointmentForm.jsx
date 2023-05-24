@@ -3,9 +3,6 @@ import styles from "../styles/Form.module.css"
 import { Button, Image, Form, Input } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
-    const [customerFiles, setFiles] = useState([])
-
-
     const insertData = (customerId, personalDetail) => {
         console.log(personalDetail)
 
