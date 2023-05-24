@@ -15,7 +15,7 @@ const AppointmentForm = () => {
     }, [form])
     const search = () => {
 
-        fetch(`http://localhost:3000/api/files`).then(res => {
+        fetch(`/api/files`).then(res => {
             res.json().then(data => {
                 setFiles(data.result)
                 console.log(customerFiles)
