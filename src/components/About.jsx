@@ -34,7 +34,6 @@ const About = () => {
         },
     ]
     return (
-
         <section className={styles.aboutContainer} id="About us">
             <div>
                 <div>
