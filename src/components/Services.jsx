@@ -19,25 +19,25 @@ const Services = () => {
         "Lorem ipsum, dolor sit amet consectetur adipisicing.",
     ]
     return (
-        <div className={styles.serviceContainer} id="Services">
+        <section className={styles.serviceContainer} id="Services">
             <div>
                 <div className={styles.serviceHeader}>
                     <div>Services</div>
                     <div>
                         <h3>Excellent services <br /> of our clinic</h3>
                         <div className={styles.serviceLinks}>
-                            {links.map((f, i) => {
+                            {links.map((link, i) => {
                                 return (
-                                    <a key={i} href="">{f}</a>
+                                    <a key={i} href="">{link}</a>
                                 )
                             })}
                         </div>
                         <div >
-                            {description.map((f, i) => {
+                            {description.map((descript, i) => {
                                 return (
                                     <div key={i} className={styles.serviceDescrip}>
                                         <div>
-                                            <div>{f}</div>
+                                            <div>{descript}</div>
                                             <Button style={{ borderRadius: '50%', height: 40, width: 40, fontSize: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }} >+</Button>
                                         </div>
                                         <hr />
@@ -69,7 +69,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default Services

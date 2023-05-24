@@ -5,7 +5,7 @@ const Hero = () => {
     const links = ['Home', 'About Us', 'Specialists', 'Doctors', 'Contact']
     const images = ["./img/old-man-1.jpeg", "./img/old-man-2.jpeg", "./img/old-man-3.jpeg", "./img/old-man-4.jpeg"]
     return (
-        <div className={styles.clinincContainer} id='Home'>
+        <section className={styles.clinincContainer} id='Home'>
 
             <img className={styles.backgroundImage} src="./img/hearnic-background.jpeg" />
             <div className={styles.header}>
@@ -15,9 +15,9 @@ const Hero = () => {
                 <div style={{ color: 'white' }}>
                     HEARNIC</div>
                 <div className={styles.headerLinks}>
-                    {links.map((f, i) => {
+                    {links.map((link, i) => {
                         return (
-                            <a href={`#${f}`} key={i}>{f}</a>
+                            <a href={`#${link}`} key={i}>{link}</a>
                         )
                     })}
                 </div>
@@ -41,9 +41,9 @@ const Hero = () => {
                     <div className={styles.userCard}>
                         <div>
                             <div className={styles.userCardImages}>
-                                {images.map((f, i) => {
+                                {images.map((img, i) => {
                                     return (
-                                        <img key={i} src={f} />
+                                        <img key={i} src={img} />
                                     )
                                 })}
                             </div>
@@ -60,7 +60,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </section >
     )
 }
 

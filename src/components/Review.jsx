@@ -5,7 +5,7 @@ import AppointmentForm from "./AppointmentForm";
 import Faq from "./Faq";
 const Review = () => {
     return (
-        <div className={styles.reviewContainer}>
+        <section className={styles.reviewContainer}>
             <div>
                 <div>Review</div>
                 <div className={styles.aboutReview}>
@@ -36,7 +36,7 @@ const Review = () => {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 

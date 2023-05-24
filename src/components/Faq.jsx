@@ -12,17 +12,17 @@ const Faq = () => {
         "./img/alkem.jpg", "./img/bioco.png", "./img/cipla.png", "./img/sun.png", "./img/reddy.jpg"
     ]
     return (
-        <div className={styles.faqContainer}>
+        <section className={styles.faqContainer}>
             <div className={styles.faqHeader}>
                 <div>FAQ</div>
                 <div>
                     <h3>Questions from <br /> our clients</h3>
                     <div>
-                        {description.map((f, i) => {
+                        {description.map((descript, i) => {
                             return (
                                 <div key={i} className={styles.faqDescrip}>
                                     <div>
-                                        <div>{f}</div>
+                                        <div>{descript}</div>
                                         <Button style={{ borderRadius: '50%', height: 40, width: 40, fontSize: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }} >+</Button>
                                     </div>
                                     <hr />
@@ -42,10 +42,10 @@ const Faq = () => {
                 </div>
                 <div className={styles.partnerBrand}>
                     {
-                        brand.map((b, i) => {
+                        brand.map((brandName, i) => {
                             return (
                                 <div key={i}>
-                                    <Image src={b} height={"100%"} width={"100%"} style={{ borderRadius: "50%", objectFit: 'cover' }} />
+                                    <Image src={brandName} height={"100%"} width={"100%"} style={{ borderRadius: "50%", objectFit: 'cover' }} />
                                 </div>
                             )
                         })
@@ -53,7 +53,7 @@ const Faq = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
 

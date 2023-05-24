@@ -19,7 +19,7 @@ const Contact = () => {
         id: "/"
     }]
     return (
-        <div className={styles.contactContainer} id="Contact">
+        <section className={styles.contactContainer} id="Contact">
             <div>
                 <div className={styles.contactHeader}>
                     <div className={styles.contactHeaderLogo}>
@@ -80,18 +80,18 @@ const Contact = () => {
                     <div>
                         <div>Site Map</div>
                         <div className={styles.siteLinks}>
-                            {siteLinks.map((l, i) => {
+                            {siteLinks.map((link, i) => {
                                 return (
                                     <Anchor
                                         style={{ color: 'white' }}
                                         key={i}
                                         items={[
                                             {
-                                                key: l,
-                                                href: `#${l}`,
-                                                title: l,
+                                                key: link,
+                                                href: `#${link}`,
+                                                title: link,
                                             },
-                                        ]} >{l}</Anchor>
+                                        ]} />
                                 )
                             })}
 
@@ -101,10 +101,10 @@ const Contact = () => {
                     <div>
                         <div>We are on socail media</div>
                         <div className={styles.socialLinks}>
-                            {links.map((l, i) => {
+                            {links.map((link, i) => {
                                 return (
 
-                                    <a href={`${l.id}`} key={i}>{l.link}</a>
+                                    <a href={`${link.id}`} key={i}>{link.link}</a>
                                 )
                             })}
                         </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

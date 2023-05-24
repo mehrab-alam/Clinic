@@ -1,8 +1,7 @@
 import styles from "../styles/About.module.css"
 import { Button, Image } from "antd";
-import { RightCircleOutlined } from '@ant-design/icons'
 const About = () => {
-    const feature = [
+    const features = [
         {
             number: "01",
             description: `We use modern 
@@ -36,7 +35,7 @@ const About = () => {
     ]
     return (
 
-        <div className={styles.aboutContainer} id="About us">
+        <section className={styles.aboutContainer} id="About us">
             <div>
                 <div>
                     <div className={styles.aboutHeader}>
@@ -55,19 +54,17 @@ const About = () => {
                         <div>Hearing problem resolving <br /> of an complexity at a <br /> fixed price</div>
 
                     </div>
-
-
                 </div>
                 <div>
                     <div className={styles.aboutFeatures}>
                         <Image preview={false} height={165} width={250} style={{ border: '1px solid', borderRadius: 8, backgroundColor: "#d9d9d9", border: 'none' }} />
                         <div>
-                            {feature.map((f, i) => {
+                            {features.map((feature, i) => {
                                 return (
                                     <div key={i}>
-                                        <div className={styles.aboutFeaturesNum}>{f.number}</div>
+                                        <div className={styles.aboutFeaturesNum}>{feature.number}</div>
                                         <hr style={{ height: 1, backgroundColor: '#d9d9d9', border: 'none' }} />
-                                        <div>{f.description}</div>
+                                        <div>{feature.description}</div>
                                     </div>
                                 )
                             })}
@@ -75,7 +72,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

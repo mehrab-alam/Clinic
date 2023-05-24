@@ -41,7 +41,7 @@ const Doctors = () => {
     }
     ]
     return (
-        <div className={styles.doctorContainer} id="Doctors" >
+        <section className={styles.doctorContainer} id="Doctors" >
             <div>
                 <div>Doctors</div>
                 <div>
@@ -55,16 +55,16 @@ const Doctors = () => {
                         </div>
                     </div>
                     <div className={styles.docProfile}>
-                        {listOfDoctors.map((f, i) => {
+                        {listOfDoctors.map((docs, i) => {
                             return (
                                 <div key={i}>
-                                    <Image style={{ backgroundColor: '#f4f1f1e6', objectFit: 'cover' }} src={f.img} width={250} height={250} />
-                                    <div className={styles.docName}>{f.name} </div>
-                                    <div className={styles.docExp}>{f.experience} </div>
+                                    <Image style={{ backgroundColor: '#f4f1f1e6', objectFit: 'cover' }} src={docs.img} width={250} height={250} />
+                                    <div className={styles.docName}>{docs.name} </div>
+                                    <div className={styles.docExp}>{docs.experience} </div>
                                     <div className={styles.docSkills}>
-                                        {f.skills.map((s, i) => {
+                                        {docs.skills.map((skill, i) => {
                                             return (
-                                                <a key={i} href="">{s}</a>
+                                                <a key={i} href="">{skill}</a>
                                             )
                                         })}
                                     </div>
@@ -74,7 +74,7 @@ const Doctors = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 export default Doctors

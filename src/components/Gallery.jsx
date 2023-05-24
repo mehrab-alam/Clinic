@@ -7,7 +7,7 @@ const Gallery = () => {
     const options = ["#Clinic", "#Audiologist", "#Therapy", "#Truthfulness", "#Trust"]
     const links = [<InstagramOutlined style={{ fontSize: '2rem', color: "#e80f25" }} />, <TwitterOutlined style={{ fontSize: '2rem', color: "skyblue" }} />, <FacebookOutlined style={{ fontSize: '2rem' }} />, <WhatsAppOutlined style={{ fontSize: '2rem', color: "green" }} />]
     return (
-        <div className={styles.galleryContainer} id="Gallery">
+        <section className={styles.galleryContainer} id="Gallery">
             <div>
                 <div className={styles.galleryDescription}>
                     <div>
@@ -16,9 +16,9 @@ const Gallery = () => {
                         <div>
                             <h3>Check out our clinic <br /> great galllery</h3>
                             <div className={styles.galleryFeatures}>
-                                {options.map((f, i) => {
+                                {options.map((option, i) => {
                                     return (
-                                        <a key={i} href="">{f}</a>
+                                        <a key={i} href="">{option}</a>
 
                                     )
                                 })}
@@ -27,9 +27,9 @@ const Gallery = () => {
                     </div>
                 </div>
                 <div className={styles.galleryLinks}>
-                    {links.map((l, i) => {
+                    {links.map((link, i) => {
                         return (
-                            <a href="" key={i}>{l}</a>
+                            <a href="" key={i}>{link}</a>
                         )
                     })}
                 </div>
@@ -61,8 +61,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-
-        </div>
+        </section>
     )
 }
 export default Gallery

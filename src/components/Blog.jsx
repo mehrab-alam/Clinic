@@ -14,7 +14,7 @@ const Blog = () => {
         skills: ["Therapist", "Ankylologist", "Head of Department"]
     },]
     return (
-        <div className={styles.blogContainer} id="Blog">
+        <section className={styles.blogContainer} id="Blog">
             <div>
                 <div>Blog</div>
                 <div className={styles.blogHeader}>
@@ -26,23 +26,23 @@ const Blog = () => {
                         </div>
                     </div>
                     <div className={styles.blogList}>
-                        {blogList.map((f, i) => {
+                        {blogList.map((blog, i) => {
                             return (
                                 <div key={i}>
-                                    <Image src={f.img} height={200} width={320} />
-                                    <div className={styles.blogLink}>{f.skills.map((f, i) => {
+                                    <Image src={blog.img} height={200} width={320} />
+                                    <div className={styles.blogLink}>{blog.skills.map((skill, i) => {
                                         return (
-                                            <a key={i} href="">{f}</a>
+                                            <a key={i} href="">{skill}</a>
                                         )
                                     })}</div>
-                                    <div>{f.description}</div>
+                                    <div>{blog.description}</div>
                                 </div>
                             )
                         })}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
