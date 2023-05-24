@@ -12,7 +12,7 @@ import Services from "./Services"
 
 const Clinic = () => {
     return (
-        <div>
+        <section>
             <Hero />
             <About />
             <Gallery />
@@ -23,7 +23,7 @@ const Clinic = () => {
             <Faq />
             <Blog />
             <Contact />
-        </div>
+        </section>
     )
 }
 export default Clinic
