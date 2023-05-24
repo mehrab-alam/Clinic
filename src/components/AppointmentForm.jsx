@@ -3,16 +3,24 @@ import styles from "../styles/Form.module.css"
 import { Button, Image, Form, Input } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
-    const insertData = (customerId, personalDetail) => {
-        console.log(personalDetail)
+    const [customerId, setCustomerId] = useState()
+    console.log(customerId)
 
+    useEffect(() => {
+        fetch(`./api/db`).then(res => {
+            res.json().then(data => {
+                console.log('Iam here in useEffect')
+                setCustomerId(data.result)
+            })
+        })
+    }, [form])
+
+    const onFinish = (personalDetail) => {
         let id = 1;
         if (customerId > 0) {
             id = customerId + 1
         }
 
-        console.log(`new id ${id}`)
-        console.log(id)
         fetch(`/api/db?id=${id}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
@@ -23,18 +31,6 @@ const AppointmentForm = () => {
 
             })
         })
-    }
-
-    const onFinish = (personalDetail) => {
-        fetch(`/api/db`).then(res => {
-            res.json().then(data => {
-                console.log(data.result[0]['COUNT(*)'])
-                insertData((data.result[0]['COUNT(*)']), personalDetail)
-            })
-        })
-
-
-
         form.resetFields()
     }
 
