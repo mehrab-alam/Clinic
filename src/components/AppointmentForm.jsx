@@ -4,46 +4,49 @@ import { Button, Image, Form, Input } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
     const [customerFiles, setFiles] = useState([])
-    useEffect(() => {
-        fetch(`http://localhost:3000/api/files`).then(res => {
-            res.json().then(data => {
-                setFiles(data.result)
-                console.log(customerFiles)
-            })
-        })
-    }, [form])
-    const search = () => {
-
-        fetch(`/api/files`).then(res => {
-            res.json().then(data => {
-                setFiles(data.result)
-                console.log(customerFiles)
-            })
-        })
-        console.log(`this is`)
-        console.log(customerFiles)
-    }
 
 
-    const onFinish = (personalDetail) => {
-        let cust = customerFiles.map(f => f.customerId).sort((b, a) => b - a).pop() + 1
-        console.log(`this is ${cust}`)
-        let customerId = customerFiles.length <= 0 ? 1 : cust
-        let newfile = customerFiles.filter(f => f.number == personalDetail.number && f.mail === personalDetail.mail)
-        newfile.map(f => customerId = f.customerId)
-
-        console.log(`this is customer id ${customerId} `)
+    const insertData = (customerId, personalDetail) => {
         console.log(personalDetail)
-        fetch(`http://localhost:3000/api/db?id=${customerId}`, {
+
+        let id = 1;
+        if (customerId > 0) {
+            id = customerId + 1
+        }
+
+        console.log(`new id ${id}`)
+        console.log(id)
+        fetch(`/api/db?id=${id}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(personalDetail)
         }).then(res => {
             res.json().then(data => {
                 console.log(data.result)
-                search()
+
             })
         })
+    }
+
+
+    const onFinish = (personalDetail) => {
+        // let cust = customerFiles.map(f => f.customerId).sort((b, a) => b - a).pop() + 1
+        // console.log(`this is ${cust}`)
+        // let customerId = customerFiles.length <= 0 ? 1 : cust
+        // let newfile = customerFiles.filter(f => f.number == personalDetail.number && f.mail === personalDetail.mail)
+        // newfile.map(f => customerId = f.customerId)
+
+        // console.log(`this is customer id ${customerId} `)
+
+
+        fetch(`/api/db`).then(res => {
+            res.json().then(data => {
+                console.log(data.result[0]['COUNT(*)'])
+                insertData((data.result[0]['COUNT(*)']), personalDetail)
+            })
+        })
+
+
 
         form.resetFields()
     }

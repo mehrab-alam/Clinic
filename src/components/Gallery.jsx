@@ -5,7 +5,7 @@ import { TwitterOutlined, FacebookOutlined, WhatsAppOutlined, InstagramOutlined 
 
 const Gallery = () => {
     const options = ["#Clinic", "#Audiologist", "#Therapy", "#Truthfulness", "#Trust"]
-    const links = [<InstagramOutlined style={{ fontSize: '150%', color: "#e80f25" }} />, <TwitterOutlined style={{ fontSize: '150%', color: "skyblue" }} />, <FacebookOutlined style={{ fontSize: '150%' }} />, <WhatsAppOutlined style={{ fontSize: '150%', color: "green" }} />]
+    const links = [<InstagramOutlined style={{ fontSize: '2rem', color: "#e80f25" }} />, <TwitterOutlined style={{ fontSize: '2rem', color: "skyblue" }} />, <FacebookOutlined style={{ fontSize: '2rem' }} />, <WhatsAppOutlined style={{ fontSize: '2rem', color: "green" }} />]
     return (
         <div className={styles.galleryContainer} id="Gallery">
             <div>

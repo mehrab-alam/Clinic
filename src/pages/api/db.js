@@ -1,11 +1,10 @@
 import mysql from 'mysql2'
+import { useState } from 'react';
 
 
 export default function handler(req, res) {
     const query = req.query
     const { id } = query
-    console.log(id)
-    const password = "Mehrab@123"
     const connection = mysql.createConnection({
         user: process.env.DB_USERS,
         password: process.env.DB_PASSWORD,
@@ -17,12 +16,21 @@ export default function handler(req, res) {
         if (err) {
             console.log(err)
         }
-        if (req.method == 'POST') {
-            const insertData = `INSERT INTO customers(customerId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`
+
+        if (req.method == 'POST' && req.body.name != undefined) {
+            console.log(req.body)
+            const insertData = `INSERT INTO customers(customerId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
             connection.query(insertData, function (err, result) {
                 if (err) throw err;
                 console.log(result)
                 res.status(200).json({})
+            })
+        } else {
+            const count = `SELECT COUNT(*) from customers;`
+            connection.query(count, function (err, result) {
+                if (err) throw err;
+                console.log(result['COUNT(*)'])
+                res.status(200).json({ result })
             })
         }
 
