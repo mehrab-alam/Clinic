@@ -9,7 +9,7 @@ const AppointmentForm = () => {
     useEffect(() => {
         fetch(`./api/db`).then(res => {
             res.json().then(data => {
-                console.log('Iam here in useEffect')
+                console.log(`customerId is ${data.result}`)
                 setCustomerId(data.result)
             })
         })
