@@ -2,7 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+
 First, run the development server:
+This is a Clinic website project,this project is about clinic in which we can see its features and equipments 
 
 ```bash
 npm run dev

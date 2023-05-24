@@ -1,7 +1,4 @@
 import mysql from 'mysql2'
-import { useState } from 'react';
-
-
 export default function handler(req, res) {
     const query = req.query
     const { id } = query
