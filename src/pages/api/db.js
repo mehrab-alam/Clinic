@@ -20,7 +20,7 @@ export default function handler(req, res) {
             connection.query(insertData, function (err, result) {
                 if (err) throw err;
                 console.log(result)
-                res.status(200).json({})
+                res.status(201).json({ stutus: 'customer created' })
             })
         } else {
             const count = `SELECT COUNT(*) from customers;`
