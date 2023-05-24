@@ -29,7 +29,6 @@ const Gallery = () => {
                 <div className={styles.galleryLinks}>
                     {links.map((l, i) => {
                         return (
-                            // <a key={i} href=""><img src={l} alt="" /></a>
                             <a href="" key={i}>{l}</a>
                         )
                     })}

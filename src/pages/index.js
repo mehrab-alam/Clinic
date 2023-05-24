@@ -1,13 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-
-// import styles from '@/styles/Home.module.css'
-import Hearnic from '@/components/Home'
-import About from '@/components/About'
-import Gallery from '@/components/Gallery'
-import Services from '@/components/Services'
-import Doctors from '@/components/Doctors'
-import Review from '@/components/Review'
 import Clinic from '@/components/Clinic'
 
 
@@ -22,12 +13,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        {/* <Hearnic />
-        <About />
-        <Gallery /> */}
-        {/* <Doctors /> */}
-        {/* <Services /> */}
-        {/* <Review /> */}
         <Clinic />
       </main>
     </>

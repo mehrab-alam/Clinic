@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Form.module.css"
 import { Button, Image, Form, Input } from "antd";
-// import { MenuUnfoldOutlined } from '@ant-design/icons'
 const AppointmentForm = () => {
     const [form] = Form.useForm()
     const [customerFiles, setFiles] = useState([])

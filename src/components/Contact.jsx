@@ -1,10 +1,7 @@
 
 import styles from "../styles/Contact.module.css"
 import { TwitterOutlined, FacebookOutlined, WhatsAppOutlined, InstagramOutlined } from '@ant-design/icons'
-
 import { Button, Image, Form, Input, Anchor, Select } from "antd";
-
-
 
 const Contact = () => {
     const siteLinks = ["Home", "Services", "Contact", "Gallery", "About us", "Doctors", "Blog", "Partners"]
@@ -21,7 +18,6 @@ const Contact = () => {
         link: <WhatsAppOutlined style={{ fontSize: '150%', color: "green" }} />,
         id: "/"
     }]
-
     return (
         <div className={styles.contactContainer} id="Contact">
             <div>

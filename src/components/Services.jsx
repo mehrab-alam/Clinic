@@ -1,10 +1,6 @@
 import styles from "../styles/Services.module.css"
-import { Button, Image } from "antd";
-import { PlusCircleOutlined, PhoneOutlined } from '@ant-design/icons'
-import Doctors from "./Doctors";
-import Review from "./Review";
-import Faq from "./Faq";
-
+import { Button } from "antd";
+import { PhoneOutlined } from '@ant-design/icons'
 
 const Services = () => {
     const links = ["All", "For adults", "For children"]
@@ -73,9 +69,6 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     )
 }

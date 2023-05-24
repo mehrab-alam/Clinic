@@ -1,7 +1,7 @@
 import { Image, Anchor, Button } from 'antd'
 import styles from "../styles/Hearnic.module.css"
 
-const Home = () => {
+const Hero = () => {
     const links = ['Home', 'About Us', 'Specialists', 'Doctors', 'Contact']
     const images = ["./img/old-man-1.jpeg", "./img/old-man-2.jpeg", "./img/old-man-3.jpeg", "./img/old-man-4.jpeg"]
     return (
@@ -64,4 +64,4 @@ const Home = () => {
     )
 }
 
-export default Home;
+export default Hero;
