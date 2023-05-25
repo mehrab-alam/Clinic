@@ -4,12 +4,9 @@ import { Button, Image, Form, Input } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
     const [customerId, setCustomerId] = useState()
-    console.log(customerId)
-
     useEffect(() => {
         fetch(`./api/db`).then(res => {
             res.json().then(data => {
-                console.log(`customerId is ${data.result}`)
                 setCustomerId(data.result)
             })
         })
@@ -27,8 +24,6 @@ const AppointmentForm = () => {
             body: JSON.stringify(personalDetail)
         }).then(res => {
             res.json().then(data => {
-                console.log(data.result)
-
             })
         })
         form.resetFields()
@@ -41,7 +36,6 @@ const AppointmentForm = () => {
                 <div className={styles.formHeader}>
                     <h3>Make an appointment <br /> with a doctor</h3>
                     <div>
-
                         <Form
                             name="personalDetail"
                             labelCol={{

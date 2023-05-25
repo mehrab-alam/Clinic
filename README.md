@@ -1,10 +1,66 @@
+
+ ![Clinic website](./public/img/Hero.png)
+
+# INTRODUCTION
+>Clinic is a project which help us to interact with some of the most experienced doctors of ENT.
+
+* ### Simple to use
+   _It is very simple to use and get familiar with features of our clinic._
+* ### Reachable
+  _You can simply reach us by just giving your contact details and we will reach you as soon as possible_
+
+## How this project built
+****
+  This project is made up using nextJs  where we connect it with tha 'mysql' database through api and insert the patients detail in the database for the future use
+
+We also use 'antd' because it  aims to avoid complicated, messy designs and focuses on ensuring user certainty with consistent appearances.
+
+## Features
+* It give us details about most experienced doctors with   their speciality and skills
+* It also provide an appointment section where you can book appointments with the doctors of you choice
+* It also provide contact section where you enter your contact details and we will reach you
+* It also has gallery section where you can see our clinic and equipments 
+* It also has a review section where you can give review to our services
+
+## Contributing
+ 
+ We've released Clinic website because it helps number of people who are not able to find experienced doctors for the treatment as well as they can find which doctor they should approach according to their problems.
+
+## Social Sites
+
+ #### We are socially active you can reach out to us with social sites too.
+ * Facebook
+ * Instagram
+ * Twitter
+ * Telegram
+ * Whats app
+
+ ## Partners
+![partners image](./public/img/partners.png)
+* Alkem
+* Biocon
+* Cipla
+* Sun Pharma
+* De. Reddy's
+
+****
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-
 First, run the development server:
-This is a Clinic website project,this project is about clinic in which we can see its features and equipments 
+
+
+
+
+
 
 ```bash
 npm run dev
