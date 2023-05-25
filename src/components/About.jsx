@@ -48,7 +48,7 @@ const About = () => {
                                 aid and
                                 speech <br /> therapy clinic in
                                 Dhanbad.</p>
-                            <a href="#Doctors">   <Button style={{ backgroundColor: "black", color: "white", borderRadius: 30, width: 140 }}>Learn More</Button></a>
+                            <a href="#Doctors">   <Button className={styles.learnButton} >Learn More</Button></a>
                         </div>
                         <div>Hearing problem resolving <br /> of an complexity at a <br /> fixed price</div>
 

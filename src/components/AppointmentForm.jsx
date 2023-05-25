@@ -1,16 +1,30 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/Form.module.css"
-import { Button, Image, Form, Input } from "antd";
+import { Button, Image, Form, Input, Modal } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
     const [customerId, setCustomerId] = useState()
+    const [dataID, setDataId] = useState()
+
+    const [state, setState] = useState({ visible: false })
+    const [empty, setempty] = useState({ visible: false })
+    const [booked, setBooked] = useState({ visible: false })
+
+
+    console.log(customerId)
+
     useEffect(() => {
-        fetch(`./api/db`).then(res => {
+        fetch(`./api/appointment`).then(res => {
             res.json().then(data => {
                 setCustomerId(data.result)
+                console.log(`it is id ${data.result}`)
             })
         })
     }, [form])
+
+
+
+
 
     const onFinish = (personalDetail) => {
         let id = 1;
@@ -18,16 +32,37 @@ const AppointmentForm = () => {
             id = customerId + 1
         }
 
-        fetch(`/api/db?id=${id}`, {
+        if (personalDetail.name === undefined) {
+            {
+                setempty({ visible: true })
+            }
+
+        }
+
+        fetch(`/api/appointment?id=${id}`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(personalDetail)
         }).then(res => {
             res.json().then(data => {
+                // if (dataID === customerId && personalDetail.name != undefined) {
+                //     {
+                //         setState({ visible: true })
+                //     }
+                // }
+
+                // else if (customerId != dataID && personalDetail.name != undefined) {
+                //     setBooked({ visible: true })
+                // }
+
             })
+
         })
         form.resetFields()
     }
+
+
+
 
     return (
         <section className={styles.formContainer} id='form'>
@@ -41,6 +76,7 @@ const AppointmentForm = () => {
                             labelCol={{
                                 span: 8,
                             }}
+
                             wrapperCol={{
                                 span: 24,
                             }}
@@ -53,7 +89,7 @@ const AppointmentForm = () => {
                             <div className={styles.formAboutYourself}>
                                 <span className={styles.labelNames}>Full Name :</span>
                                 <Form.Item name={['name']} style={{ backgroundColor: "#140e56", borderRadius: 20, height: '100%', width: 230, color: "red" }}>
-                                    <Input style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                    <Input autoComplete="null" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
                                 </Form.Item>
                                 <div>
                                     <div className={styles.contactEmail}>
@@ -108,8 +144,30 @@ const AppointmentForm = () => {
 
                                 </div>
                             </div>
-                            <Button style={{ backgroundColor: '#140e56', borderRadius: 20, width: 150 }} type="primary" htmlType="submit" >Submit</Button>
+                            <Button style={{ backgroundColor: '#140e56', borderRadius: 20, width: 150 }} type="primary" htmlType="submit"  >Submit</Button>
+                            <Modal
+                                title="Appointment Form"
+                                open={state.visible}
+                                onOk={() => setState(!state.visible)}
+                            >
+                                <p>Your already booked the appointment</p>
+                            </Modal>
+                            <Modal
+                                title="Appointment Form"
+                                open={empty.visible}
+                                onOk={() => setempty(!empty.visible)}
+                            >
+                                <p>First fill the form</p>
+                            </Modal>
+                            <Modal
+                                title="Appointment Form"
+                                open={booked.visible}
+                                onOk={() => setBooked(!booked.visible)}
+                            >
+                                <p>Your appointment is booked</p>
+                            </Modal>
                         </Form>
+
                     </div>
                 </div>
 

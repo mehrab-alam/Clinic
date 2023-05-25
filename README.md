@@ -11,16 +11,16 @@
 
 ## How this project built
 ****
-  This project is made up using nextJs  where we connect it with tha 'mysql' database through api and insert the patients detail in the database for the future use
+  This project is made up using nextJs  where we connect it with the 'mysql' database through api and insert the patients detail in the database for the future use
 
 We also use 'antd' because it  aims to avoid complicated, messy designs and focuses on ensuring user certainty with consistent appearances.
 
 ## Features
 * It give us details about most experienced doctors with   their speciality and skills
-* It also provide an appointment section where you can book appointments with the doctors of you choice
-* It also provide contact section where you enter your contact details and we will reach you
-* It also has gallery section where you can see our clinic and equipments 
-* It also has a review section where you can give review to our services
+* It  provide an appointment section where you can book appointments with the doctors of your choice
+* It  provide contact section where you enter your contact details and we will reach you
+* It  has gallery section where you can see our clinic and equipments 
+* It  has a review section where you can give review to our services
 
 ## Contributing
  

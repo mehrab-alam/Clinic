@@ -94,3 +94,10 @@
     font-size: 4rem;
     background-color: #fbfbfb;
 }
+
+.learnButton {
+    background-color: black;
+    color: white;
+    border-radius: 30;
+    width: 140
+}

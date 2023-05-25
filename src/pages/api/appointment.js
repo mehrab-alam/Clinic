@@ -1,7 +1,6 @@
 import mysql from 'mysql2'
 export default function handler(req, res) {
     const query = req.query
-    const { id, files } = query
     const connection = mysql.createConnection({
         user: process.env.DB_USERS,
         password: process.env.DB_PASSWORD,
@@ -12,25 +11,32 @@ export default function handler(req, res) {
     connection.connect((err) => {
         if (err) {
             console.log(err)
+            res.status(500).json({ result: 'there is some problem' })
         }
-        const count = `SELECT COUNT(*) from customers;`
-        connection.query(count, function (err, result) {
-            if (err) throw err;
-            res.status(200).json({ result: result[0]['COUNT(*)'] })
-        })
+
+        /**
+         * api for inserting the data in table
+         */
         if (req.method == 'POST') {
-            const count = `SELECT COUNT(*) from customers WHERE mail = "${req.body.mail}" &&  number = ${req.body.number};`
+            const count = `SELECT COUNT(*) from Patients WHERE mail = "${req.body.mail}" &&  number = ${req.body.number};`
             connection.query(count, function (err, result) {
                 if (err) throw err;
-                console.log(result[0]['COUNT(*)'])
                 if (result[0]['COUNT(*)'] > 0) {
                     res.status(201).json({ result: `it is already exist` })
+                    console.log("exist")
                 }
                 else {
-                    const insertData = `INSERT INTO customers(customerId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
-                    connection.query(insertData, function (err, result) {
+
+                    const count = `SELECT COUNT(*) from Patients;`
+                    connection.query(count, function (err, result) {
                         if (err) throw err;
-                        res.status(201).json({ stutus: 'customer created' })
+                        let id = result[0]['COUNT(*)'] + 1
+                        const insertData = `INSERT INTO Patients(patientId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
+                        connection.query(insertData, function (err, result) {
+                            if (err) throw err;
+                            res.status(200).json({ stutus: 'customer created' })
+                        })
+
                     })
                 }
             })
