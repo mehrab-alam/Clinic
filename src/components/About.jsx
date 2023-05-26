@@ -56,7 +56,7 @@ const About = () => {
                 </div>
                 <div>
                     <div className={styles.aboutFeatures}>
-                        <Image preview={false} height={165} width={250} style={{ border: '1px solid', borderRadius: 8, backgroundColor: "#d9d9d9", border: 'none' }} />
+                        <Image preview={false} height={165} width={250} className={styles.aboutImage} />
                         <div>
                             {features.map((feature, i) => {
                                 return (
