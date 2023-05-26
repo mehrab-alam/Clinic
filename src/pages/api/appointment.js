@@ -18,6 +18,9 @@ export default function handler(req, res) {
          * api for inserting the data in table
          */
         if (req.method == 'POST') {
+            /***
+             * querry for checking wheather this patient's information already exist or not.
+             */
             const count = `SELECT COUNT(*) from Patients WHERE mail = "${req.body.mail}" &&  number = ${req.body.number};`
             connection.query(count, function (err, result) {
                 if (err) throw err;
@@ -26,15 +29,20 @@ export default function handler(req, res) {
                     console.log("exist")
                 }
                 else {
-
+                    /***
+                     * counting the rows and setting the id accordingly.
+                     */
                     const count = `SELECT COUNT(*) from Patients;`
                     connection.query(count, function (err, result) {
                         if (err) throw err;
                         let id = result[0]['COUNT(*)'] + 1
+                        /**
+                         * querry for inserting the information of the patients
+                         */
                         const insertData = `INSERT INTO Patients(patientId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
                         connection.query(insertData, function (err, result) {
                             if (err) throw err;
-                            res.status(200).json({ stutus: 'customer created' })
+                            res.status(200).json({ status: ' appointment booked' })
                         })
 
                     })
