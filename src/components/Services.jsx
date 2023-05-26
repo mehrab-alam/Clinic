@@ -38,7 +38,7 @@ const Services = () => {
                                     <div key={i} className={styles.serviceDescrip}>
                                         <div>
                                             <div>{descript}</div>
-                                            <Button style={{ borderRadius: '50%', height: 40, width: 40, fontSize: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }} >+</Button>
+                                            <Button className={styles.plusButton}  >+</Button>
                                         </div>
                                         <hr />
                                     </div>
@@ -54,7 +54,7 @@ const Services = () => {
                         </div>
                         <div>
                             <div>50%</div>
-                            <a href="#Contact">  <Button style={{ borderRadius: '50%', height: 25, width: 25, display: 'flex', justifyContent: 'center' }} ><PhoneOutlined /></Button></a>
+                            <a href="#Contact">  <Button className={styles.phoneButton}  ><PhoneOutlined /></Button></a>
                         </div>
                     </div>
                     <div>

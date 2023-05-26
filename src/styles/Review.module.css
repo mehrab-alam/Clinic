@@ -92,3 +92,10 @@
     color: gray;
     margin-top: 10px;
 }
+
+.reviewImage {
+    border-radius: 50%;
+    border: 1px solid gray;
+    object-fit: cover;
+    background-color: #f4f1f1e6;
+}

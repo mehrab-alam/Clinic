@@ -134,3 +134,23 @@
     justify-content: space-between;
     font-size: 2rem;
 }
+
+.plusButton {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.phoneButton {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

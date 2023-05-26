@@ -83,3 +83,27 @@
     display: flex;
     gap: 40px;
 }
+
+.formItem {
+    background-color: #140e56;
+    border-radius: 20px;
+    height: 100%;
+    width: 230px
+}
+
+.inputField {
+    background-color: #140e56;
+    color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: none;
+    height: 40px
+}
+
+.submitBtn {
+    background-color: #140e56;
+    border-radius: 20px;
+    width: 150px;
+}

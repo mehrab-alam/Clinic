@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import About from "./About"
 import AppointmentForm from "./AppointmentForm"
 import Blog from "./Blog"

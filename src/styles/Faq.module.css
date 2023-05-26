@@ -81,3 +81,14 @@
     border: 1px solid;
     border-radius: 50%;
 }
+
+.plusButton {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}

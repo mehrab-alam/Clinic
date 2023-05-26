@@ -45,32 +45,32 @@ const Contact = () => {
                         <div className={styles.formInputs}>
                             <div className={styles.contactEmail}>
                                 <span className={styles.labelNames}>Full Name :</span>
-                                <Form.Item name={['full name']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 280 }}>
-                                    <Input type="text" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                <Form.Item name={['full name']} className={styles.formItem} >
+                                    <Input type="text" className={styles.inputField} />
                                 </Form.Item>
                             </div>
                             <div className={styles.contactEmail}>
 
                                 <span className={styles.labelNames}>+91 :</span>
-                                <Form.Item name={['email']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 280 }}>
-                                    <Input type="email" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                <Form.Item name={['email']} className={styles.formItem} >
+                                    <Input type="email" className={styles.inputField} />
                                 </Form.Item>
                             </div>
                             <div className={styles.contactEmail}>
                                 <span className={styles.labelNames} >age</span>
-                                <Form.Item name={['number']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 280 }}>
-                                    <Input type="number" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                <Form.Item name={['number']} className={styles.formItem} >
+                                    <Input type="number" className={styles.inputField} />
                                 </Form.Item>
 
                             </div>
                             <div className={styles.contactEmail}>
 
                                 <span className={styles.labelNames}>E-mail :</span>
-                                <Form.Item name={['email']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 280 }}>
-                                    <Input type="email" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                <Form.Item name={['email']} className={styles.formItem} >
+                                    <Input type="email" className={styles.inputField} />
                                 </Form.Item>
                             </div>
-                            <Button style={{ backgroundColor: '#140e56', borderRadius: 20, width: 150 }} type="primary" htmlType="submit" >Submit</Button>
+                            <Button className={styles.submitBtn} type="primary" htmlType="submit" >Submit</Button>
 
                         </div>
 

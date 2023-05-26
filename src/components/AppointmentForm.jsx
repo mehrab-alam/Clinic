@@ -3,62 +3,43 @@ import styles from "../styles/Form.module.css"
 import { Button, Image, Form, Input, Modal } from "antd";
 const AppointmentForm = () => {
     const [form] = Form.useForm()
-    const [customerId, setCustomerId] = useState()
-    const [dataID, setDataId] = useState()
-
     const [state, setState] = useState({ visible: false })
     const [empty, setempty] = useState({ visible: false })
     const [booked, setBooked] = useState({ visible: false })
 
-
-    console.log(customerId)
-
-    useEffect(() => {
-        fetch(`./api/appointment`).then(res => {
-            res.json().then(data => {
-                setCustomerId(data.result)
-                console.log(`it is id ${data.result}`)
-            })
-        })
-    }, [form])
-
-
-
-
-
     const onFinish = (personalDetail) => {
-        let id = 1;
-        if (customerId > 0) {
-            id = customerId + 1
-        }
-
-        if (personalDetail.name === undefined) {
+        if (personalDetail.name === undefined || personalDetail.number == undefined || personalDetail.mail === undefined || personalDetail.address === undefined) {
             {
                 setempty({ visible: true })
             }
+        } else {
+            console.log(`tihs is value ${personalDetail.value}`)
 
-        }
+            fetch(`/api/appointment`, {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(personalDetail)
+            }).then(res => {
+                res.json().then(data => {
+                    console.log(data)
+                    if (data.status === ' appointment booked') {
+                        {
+                            setBooked({ visible: true })
+                        }
+                    }
 
-        fetch(`/api/appointment?id=${id}`, {
-            method: 'POST',
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(personalDetail)
-        }).then(res => {
-            res.json().then(data => {
-                // if (dataID === customerId && personalDetail.name != undefined) {
-                //     {
-                //         setState({ visible: true })
-                //     }
-                // }
+                    else if (data.result === 'it is already exist') {
+                        setState({ visible: true })
 
-                // else if (customerId != dataID && personalDetail.name != undefined) {
-                //     setBooked({ visible: true })
-                // }
+                    }
+
+                })
 
             })
+            form.resetFields()
+        }
 
-        })
-        form.resetFields()
+
     }
 
 
@@ -88,21 +69,21 @@ const AppointmentForm = () => {
                             <div className={styles.aboutYourself}>About Yourself</div>
                             <div className={styles.formAboutYourself}>
                                 <span className={styles.labelNames}>Full Name :</span>
-                                <Form.Item name={['name']} style={{ backgroundColor: "#140e56", borderRadius: 20, height: '100%', width: 230, color: "red" }}>
-                                    <Input autoComplete="null" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                <Form.Item name={['name']} className={styles.formItem} >
+                                    <Input autoComplete="null" className={styles.inputField} />
                                 </Form.Item>
                                 <div>
                                     <div className={styles.contactEmail}>
                                         <span className={styles.labelNames}>+91 :</span>
-                                        <Form.Item name={['number']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 230 }}>
-                                            <Input type="number" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                        <Form.Item name={['number']} className={styles.formItem} >
+                                            <Input type="number" className={styles.inputField} />
                                         </Form.Item>
                                     </div>
                                     <div className={styles.contactEmail}>
 
                                         <span className={styles.labelNames}>E-mail :</span>
-                                        <Form.Item name={['mail']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 230 }}>
-                                            <Input type="email" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                        <Form.Item name={['mail']} className={styles.formItem}>
+                                            <Input type="email" className={styles.inputField} />
                                         </Form.Item>
                                     </div>
 
@@ -114,14 +95,14 @@ const AppointmentForm = () => {
                                     <div>
                                         <div className={styles.contactEmail}>
                                             <span className={styles.labelNames}>Location:</span>
-                                            <Form.Item name={['location']} style={{ backgroundColor: "#140e56", borderRadius: 20, color: "red", width: 230 }}>
-                                                <Input style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                            <Form.Item name={['location']} className={styles.formItem}>
+                                                <Input className={styles.inputField} />
                                             </Form.Item>
                                         </div>
                                         <div className={styles.contactEmail}>
                                             <span className={styles.labelNames}>Date :</span>
-                                            <Form.Item name={['Date']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 230 }}>
-                                                <Input type="Date" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                            <Form.Item name={['Date']} className={styles.formItem}>
+                                                <Input type="Date" className={styles.inputField} />
                                             </Form.Item>
                                         </div>
                                     </div>
@@ -129,14 +110,14 @@ const AppointmentForm = () => {
                                         <div className={styles.contactEmail}>
                                             <span className={styles.labelNames}>Address :</span>
 
-                                            <Form.Item name={['address']} style={{ backgroundColor: "#140e56", borderRadius: 20, color: "red", width: 230 }}>
-                                                <Input style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                            <Form.Item name={['address']} className={styles.formItem}>
+                                                <Input className={styles.inputField} />
                                             </Form.Item>
                                         </div>
                                         <div className={styles.contactEmail}>
                                             <span className={styles.labelNames}>Time :</span>
-                                            <Form.Item name={['time']} style={{ backgroundColor: "#140e56", borderRadius: 20, width: 230 }}>
-                                                <Input type="time" style={{ backgroundColor: "#140e56", color: 'white', borderTopRightRadius: 20, borderBottomRightRadius: 20, borderTopLeftRadius: 0, borderBottomLeftRadius: 0, border: 'none', height: 40 }} />
+                                            <Form.Item name={['time']} className={styles.formItem}>
+                                                <Input className={styles.inputField} type="time" />
                                             </Form.Item>
                                         </div>
 
@@ -144,7 +125,7 @@ const AppointmentForm = () => {
 
                                 </div>
                             </div>
-                            <Button style={{ backgroundColor: '#140e56', borderRadius: 20, width: 150 }} type="primary" htmlType="submit"  >Submit</Button>
+                            <Button className={styles.submitBtn} type="primary" htmlType="submit"  >Submit</Button>
                             <Modal
                                 title="Appointment Form"
                                 open={state.visible}
@@ -165,6 +146,7 @@ const AppointmentForm = () => {
                                 onOk={() => setBooked(!booked.visible)}
                             >
                                 <p>Your appointment is booked</p>
+                                <p>We'll reach you soon</p>
                             </Modal>
                         </Form>
 

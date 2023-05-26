@@ -96,3 +96,8 @@
 .docSkills a:last-child {
     width: 100%;
 }
+
+.docImg {
+    background-color: #f4f1f1e6;
+    object-fit: cover
+}

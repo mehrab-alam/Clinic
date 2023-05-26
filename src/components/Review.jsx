@@ -1,8 +1,6 @@
 import styles from "../styles/Review.module.css"
 import { Button, Image } from "antd";
-import { PlusCircleOutlined, PhoneOutlined } from '@ant-design/icons'
-import AppointmentForm from "./AppointmentForm";
-import Faq from "./Faq";
+
 const Review = () => {
     return (
         <section className={styles.reviewContainer}>
@@ -19,7 +17,7 @@ const Review = () => {
                         </div>
                     </div>
                     <div className={styles.reviewContent}>
-                        <Image style={{ borderRadius: '50%', border: '1px solid gray', objectFit: 'cover', backgroundColor: '#f4f1f1e6' }} src="./img/girl-doc.png" height={'0%'} width={'100%'} />
+                        <Image className={styles.reviewImage} src="./img/girl-doc.png" height={'0%'} width={'100%'} />
                         <div>
                             <div>,,</div>
                             <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae facere quas voluptatibus maiores ipsum  omnis iusto ratione temporibus! Provident  iusto quis nesciunt aspernatur blanditiis non ut dolores voluptas numquam laborum!

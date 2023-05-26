@@ -21,8 +21,8 @@ const Blog = () => {
                     <div>
                         <h3>You may be <br /> intrested to know</h3>
                         <div className={styles.blogArrow}>
-                            <Button style={{ height: 60, width: 60, borderRadius: '50%', fontSize: 40, display: 'flex', justifyContent: "center", alignItems: 'center' }}>&rarr;</Button>
-                            <Button style={{ height: 60, width: 60, borderRadius: '50%', fontSize: 40, display: 'flex', justifyContent: "center", alignItems: 'center' }}>&larr;</Button>
+                            <Button className={styles.blogBtn} >&rarr;</Button>
+                            <Button className={styles.blogBtn} >&larr;</Button>
                         </div>
                     </div>
                     <div className={styles.blogList}>

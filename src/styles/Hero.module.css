@@ -174,3 +174,9 @@
 .userCard>div:last-child>div:first-child {
     font-size: 2.5rem;
 }
+
+.appointmentButton {
+    width: 130px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}

@@ -55,7 +55,7 @@ const Hero = () => {
                         </div>
                         <div>
                             <div>20%</div>
-                            <a href="#form"> <Button style={{ width: 130, fontSize: 10, fontWeight: 'bold' }} >Make an appointment</Button></a>
+                            <a href="#form"> <Button className={styles.appointmentButton}  >Make an appointment</Button></a>
                         </div>
                     </div>
                 </div>

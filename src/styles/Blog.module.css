@@ -62,3 +62,13 @@
 .blogList>div>div:last-child {
     font-size: 1.2rem;
 }
+
+.blogBtn {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

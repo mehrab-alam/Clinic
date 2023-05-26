@@ -23,7 +23,7 @@ const Faq = () => {
                                 <div key={i} className={styles.faqDescrip}>
                                     <div>
                                         <div>{descript}</div>
-                                        <Button style={{ borderRadius: '50%', height: 40, width: 40, fontSize: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }} >+</Button>
+                                        <Button className={styles.plusButton}  >+</Button>
                                     </div>
                                     <hr />
                                 </div>

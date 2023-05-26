@@ -36,7 +36,7 @@ const Gallery = () => {
             </div>
             <div className={styles.galleryUpload}>
                 <div>
-                    <Image preview={false} height={400} width={350} style={{ border: '1px solid', borderRadius: 4, backgroundColor: "#d9d9d9", border: 'none' }} />
+                    <Image preview={false} height={400} width={350} className={styles.galleryImg} />
                     <div>
                         <span>01</span>
                         <span>/</span>
@@ -49,7 +49,7 @@ const Gallery = () => {
                 </div>
                 <div>Drag</div>
                 <div>
-                    <Image preview={false} height={300} width={250} style={{ border: '1px solid', borderRadius: 4, backgroundColor: "#d9d9d9", border: 'none' }} />
+                    <Image preview={false} height={300} width={250} className={styles.galleryImg} />
                     <div>
                         <span>01</span>
                         <span>/</span>

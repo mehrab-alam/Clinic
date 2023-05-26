@@ -58,7 +58,7 @@ const Doctors = () => {
                         {listOfDoctors.map((docs, i) => {
                             return (
                                 <div key={i}>
-                                    <Image style={{ backgroundColor: '#f4f1f1e6', objectFit: 'cover' }} src={docs.img} width={250} height={250} />
+                                    <Image className={styles.docImg} src={docs.img} width={250} height={250} />
                                     <div className={styles.docName}>{docs.name} </div>
                                     <div className={styles.docExp}>{docs.experience} </div>
                                     <div className={styles.docSkills}>
