@@ -11,7 +11,7 @@ export default function handler(req, res) {
     connection.connect((err) => {
         if (err) {
             console.log(err)
-            res.status(500).json({ result: 'there is some problem' })
+            res.status(500).json({ result: err })
         }
 
         /**
@@ -21,25 +21,24 @@ export default function handler(req, res) {
             /***
              * querry for checking wheather this patient's information already exist or not.
              */
-            const count = `SELECT COUNT(*) from Patients WHERE mail = "${req.body.mail}" &&  number = ${req.body.number};`
+            const count = `SELECT COUNT(*) from patients WHERE mail = "${req.body.mail}" &&  number = ${req.body.number};`
             connection.query(count, function (err, result) {
                 if (err) throw err;
                 if (result[0]['COUNT(*)'] > 0) {
                     res.status(201).json({ result: `it is already exist` })
-                    console.log("exist")
                 }
                 else {
                     /***
                      * counting the rows and setting the id accordingly.
                      */
-                    const count = `SELECT COUNT(*) from Patients;`
+                    const count = `SELECT COUNT(*) from patients;`
                     connection.query(count, function (err, result) {
                         if (err) throw err;
                         let id = result[0]['COUNT(*)'] + 1
                         /**
                          * querry for inserting the information of the patients
                          */
-                        const insertData = `INSERT INTO Patients(patientId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
+                        const insertData = `INSERT INTO patients(patientId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
                         connection.query(insertData, function (err, result) {
                             if (err) throw err;
                             res.status(200).json({ status: ' appointment booked' })
@@ -75,30 +74,4 @@ export default function handler(req, res) {
 
 
 
-
-
-        //     connection.query(`SELECT * FROM customers`, function (err, result) {
-        //         if (err) throw err;
-        //         res.status(200).json({ result })
-        //     })
-
-
-        //     if (req.method == 'POST' && req.body.key == undefined) {
-        //         const count = `SELECT COUNT(*) from customers;`
-        //         connection.query(count, function (err, result) {
-        //             if (err) throw err;
-        //             console.log(result['COUNT(*)'])
-        //             res.status(200).json({ result })
-        //         })
-        //     }
-
-        //     if (req.method == 'POST' && req.body.name != undefined) {
-        //         console.log(req.body)
-        //         const insertData = `INSERT INTO customers(customerId,name,mail,number,Date,time,location,address) VALUES(${id},"${req.body.name}","${req.body.mail}",${req.body.number},"${req.body.Date}","${req.body.time}","${req.body.location}","${req.body.address}")`;
-        //         connection.query(insertData, function (err, result) {
-        //             if (err) throw err;
-        //             console.log(result)
-        //             res.status(201).json({ stutus: 'customer created' })
-        //         })
-        //     }
 
