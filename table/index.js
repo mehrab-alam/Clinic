@@ -1,9 +1,4 @@
 import mysql from 'mysql2'
-console.log(`this is my user name ${process.env.DB_USERS}`)
-console.log(`this is my password ${process.env.DB_PASSWORD}`)
-console.log(`this is my database ${process.env.DB_DATABASE}`)
-console.log(`this is my host ${process.env.DB_HOST}`)
-console.log(`this is my port ${process.env.DB_PORT}`)
 
 const connection = mysql.createConnection({
     user: process.env.DB_USERS,
