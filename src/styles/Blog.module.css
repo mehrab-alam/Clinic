@@ -1,74 +1,84 @@
 .blogContainer {
-    font-family: sans-serif;
-    margin-top: 100px;
+  font-family: sans-serif;
+  margin-top: 100px;
 }
 
-.blogContainer>div:first-child {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    gap: 100px;
+.blogContainer > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 100px;
 }
 
-.blogContainer>div:first-child>div:first-child {
-    font-size: 1.5rem;
-    font-weight: bold;
+.blogContainer > div:first-child > div:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .blogHeader h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.2rem;
-    margin-bottom: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
 }
 
-.blogHeader>div:first-child {
-    display: flex;
-    gap: 340px;
+.blogHeader > div:first-child {
+  display: flex;
+  gap: 340px;
 }
 
 .blogArrow {
-    display: flex;
+  display: flex;
 }
 
 .blogList {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 30px;
 }
-
+.blogList p {
+  max-width: 400px;
+  font-size: 15px;
+}
 .blogLink {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 10px;
-    column-gap: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+  column-gap: 5px;
 }
 
 .blogLink a {
-    text-decoration: none;
-    color: black;
-    background-color: #f4f1f1e6;
-    border: 1px solid gray;
-    padding: 5px 10px;
-    border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  background-color: #f4f1f1e6;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 15px;
 }
 
 .blogLink a:last-child {
-    width: 100%;
+  width: 100%;
 }
 
-.blogList>div>div:last-child {
-    font-size: 1.2rem;
+.blogList > div > div:last-child {
+  font-size: 1.2rem;
 }
 
 .blogBtn {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog_list_wrapper {
+  display: flex;
+
+  justify-content: right;
 }

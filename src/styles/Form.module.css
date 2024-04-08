@@ -1,109 +1,111 @@
 .formContainer {
-    font-family: sans-serif;
-    margin-top: 70px;
-    background-color: #3a487b;
-    padding: 70px;
+  font-family: sans-serif;
+  margin-top: 70px;
+  background-color: #3a487b;
+  padding: 70px;
 }
 
 .formContainer h3,
 .formContainer p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.formContainer>div:first-child {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    gap: 100px;
-    align-items: flex-start;
+.formContainer > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .formHeader h3 {
-    font-size: 2.2rem;
-    color: #fff;
-    margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 40px;
 }
 
-.formHeader>div:last-child>div:first-child {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.formHeader > div:last-child > div:first-child {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.formHeader>div:last-child>div:last-child {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 80px;
+.formHeader > div:last-child > div:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 80px;
 }
 
-.formHeader>div:last-child>div:nth-child(3) {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-
+.formHeader > div:last-child > div:nth-child(3) {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
 }
 
 .formAboutYourself {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
-.dateInput>div:first-child,
+.dateInput > div:first-child,
 .aboutYourself {
-    color: #fff;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.dateInput>div:last-child {
-    display: flex;
-    gap: 40px;
+.dateInput > div:last-child {
+  display: flex;
+  gap: 40px;
 }
 
 .labelNames {
-    margin-right: -40px;
-    width: 80px;
-    height: 40px;
-    border: 1px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-Right-radius: 0px;
-    border-bottom-Right-radius: 0px;
-    color: white;
-    background-color: #140e56;
-    border: none;
+  margin-right: -40px;
+  width: 80px;
+  height: 40px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: white;
+  padding-left: 10px;
+  background-color: #140e56;
+  border: none;
 }
 
 .contactEmail {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 .formItem {
-    background-color: #140e56;
-    border-radius: 20px;
-    height: 100%;
-    width: 230px
+  background-color: #140e56;
+  border-radius: 20px;
+  height: 100%;
+  width: 300px;
+  height: 40px;
 }
 
 .inputField {
-    background-color: #140e56;
-    color: white;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border: none;
-    height: 40px
+  background-color: #140e56;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  height: 40px;
 }
 
 .submitBtn {
-    background-color: #140e56;
-    border-radius: 20px;
-    width: 150px;
+  background-color: #140e56;
+  border-radius: 20px;
+  height: 40px;
+  width: 200px;
 }

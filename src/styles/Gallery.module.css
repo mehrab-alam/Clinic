@@ -1,124 +1,129 @@
 .galleryContainer {
-    margin-top: 100px;
-    font-family: sans-serif;
+  margin-top: 100px;
+  font-family: sans-serif;
 }
 
-.galleryContainer>div:first-child {
-
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-
+.galleryContainer > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-.galleryContainer>div:last-child {
-    padding-top: 50px;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    gap: 60px;
+.galleryContainer > div:last-child {
+  padding-top: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+}
+.galleryDescription {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-
-.galleryDescription>div:first-child {
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
+.galleryDescription > div:first-child {
+  font-size: 2rem;
 }
 
-.galleryDescription>div:first-child>div:first-child {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-left: 18px;
+.galleryDescription > div:first-child > div:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 18px;
 }
 
 .galleryContainer h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+  font-size: 2.2rem;
 }
 
 .galleryFeatures {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 15px;
-    column-gap: 10px;
-
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  column-gap: 10px;
 }
 
 .galleryFeatures a {
-    text-decoration: none;
-    border: 1px solid gray;
-    border-radius: 15px;
-    padding: 5px 10px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f1f1e6;
-
+  text-decoration: none;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f1f1e6;
 }
 
 .galleryLinks {
-    height: 50px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .galleryLinks a {
-    height: 40px;
-    width: 40px;
-    border: 1px solid #7f7c7c;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f1f1e6;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #7f7c7c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f1f1e6;
 }
 
 .galleryLinks img {
-    border-radius: 50%;
-    height: 30px;
-    width: auto;
-    object-fit: cover;
+  border-radius: 50%;
+  height: 30px;
+  width: auto;
+  object-fit: cover;
+}
+.galleryUpload {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.galleryUpload>div:nth-child(2) {
-    border: 1px solid;
-    height: 80px;
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: black;
-    color: #fff;
-    align-self: center;
+.galleryUpload > div:nth-child(2) {
+  cursor: pointer;
+  border: 1px solid;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: black;
+  color: #fff;
+  align-self: center;
 }
 
-.galleryUpload>div:first-child>div,
-.galleryUpload>div:last-child>div {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    font-size: 1.2rem;
-
+.galleryUpload > div:first-child > div,
+.galleryUpload > div:last-child > div {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  margin: 20px 0px;
+  line-height: 1.5;
 }
 
 .discount {
-    color: gray;
+  color: gray;
 }
 
 .therapy {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .galleryImg {
-    border: 1px solid;
-    border-radius: 4px;
-    background-color: #d9d9d9;
-    border: none
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+  border: none;
 }

@@ -1,156 +1,155 @@
 .serviceContainer {
-    font-family: sans-serif;
-    margin-top: 100px;
+  font-family: sans-serif;
+  margin-top: 100px;
 }
 
-.serviceContainer>div:first-child {
-    max-width: 800px;
-    margin: 0 auto;
-    /* height: 90vh; */
+.serviceContainer > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* height: 90vh; */
 }
 
 .serviceHeader {
-    display: flex;
-    align-items: flex-start;
-    gap: 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 200px;
 }
 
-.serviceHeader>div:first-child {
-    font-weight: bold;
-    font-size: 1.5rem
+.serviceHeader > div:first-child {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.serviceHeader>div:last-child {
-    width: 1100px;
+.serviceHeader > div:last-child {
+  width: 1100px;
 }
 
-.serviceHeader>div:last-child h3 {
-    font-size: 2.2rem;
-    margin: 0;
-    padding: 0;
+.serviceHeader > div:last-child h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .serviceLinks {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .serviceLinks a {
-    display: inline-flex;
-    margin-right: 20px;
-    text-decoration: none;
-    border: 1px solid gray;
-    padding: 5px 10px;
-    border-radius: 20px;
-    color: black;
-    background-color: #f4f1f1e6;
+  display: inline-flex;
+  margin-right: 20px;
+  text-decoration: none;
+  border: 1px solid gray;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: black;
+  background-color: #f4f1f1e6;
 }
 
 .serviceLinks a:first-child {
-    padding: 6px 20px;
-    background-color: black;
-    color: #fff;
-
+  padding: 6px 20px;
+  background-color: black;
+  color: #fff;
 }
 
 .serviceDescrip {
-    margin-top: 40px;
-    width: 100%;
-    color: black;
+  display: flex;
+  align-items: center;
+  margin: 40px 0px;
+  padding-bottom: 20px;
+  width: 100%;
+  color: black;
+  border-bottom: 2px solid #eee;
 }
 
-.serviceDescrip hr {
-    height: 1px;
-    border: none;
-    background-color: #d0cbcbc2;
-}
-
-.serviceDescrip>div:first-child {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-    gap: 200px;
+.serviceDescrip > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 .serviceFooter {
-    display: flex;
-    margin-top: 40px;
-    align-items: flex-start;
-    justify-content: space-between;
-    height: 150px;
-
+  display: flex;
+  margin-top: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 150px;
 }
 
-.serviceFooter>div:last-child {
-    width: 450px;
-    height: 100%;
-    border: none;
-    display: flex;
-    padding: 10px;
-    background-color: #fafafa;
+.serviceFooter > div:last-child {
+  width: 450px;
+  height: 180px;
+  border: none;
+  display: flex;
+  padding: 10px;
+  background-color: #eee;
 }
 
-.serviceFooter>div:last-child img {
-    position: relative;
-    height: 220px;
-    bottom: 50px;
-    left: -40px;
+.serviceFooter > div:last-child img {
+  position: relative;
+  height: 170px;
+
+  /* left: -40px; */
 }
 
 .doctorInto {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  height: 180px;
+  width: 400px;
 }
 
-.doctorInto>div:first-child {
-    height: 20px;
-    width: 40px;
-    border: 1px solid #757272;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+.doctorInto > div:first-child {
+  height: 20px;
+  width: 40px;
+  border: 1px solid #757272;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.doctorInto>div:last-child>div:last-child {
-    margin-top: 10px;
-    color: #bdb6b8;
+.doctorInto > div:last-child > div:last-child {
+  margin-top: 10px;
+  color: #bdb6b8;
 }
 
 .serviceDiscount {
-    border: 1px solid;
-    padding: 10px;
-    height: 100%;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #594e51;
-    color: #ffffff;
+  border: 1px solid;
+  padding: 15px;
+  height: 180px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #594e51;
+  color: #ffffff;
 }
 
-.serviceDiscount>div:last-child {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 2rem;
+.serviceDiscount > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
 }
 
 .plusButton {
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phoneButton {
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
