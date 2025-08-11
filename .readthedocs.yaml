@@ -1,14 +1,12 @@
-# .readthedocs.yaml
-version: 2  # Required RTD config version
-
+version: 2
 build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
 
 sphinx:
-  configuration: docs/conf.py  # Path to your Sphinx conf.py
+  configuration: docs/conf.py
 
 python:
   install:
-    - requirements: docs/requirements.txt  # Path to your Python deps
+    - requirements: docs/requirements.txt
